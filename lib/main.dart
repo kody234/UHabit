@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:u_habit/core/constants/app_colors.dart';
 import 'package:u_habit/features/splash_screen/view/splash_screen.dart';
 
 import 'core/routes/routes.dart';
@@ -22,7 +23,9 @@ class MyApp extends StatelessWidget {
       designSize: const Size(414, 896),
       builder: (context, child) => GetMaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(fontFamily: GoogleFonts.raleway().fontFamily),
+        theme: ThemeData(
+            fontFamily: GoogleFonts.raleway().fontFamily,
+            primarySwatch: Colors.orange),
         initialRoute: SplashScreen.path,
         smartManagement: SmartManagement.keepFactory,
         getPages: AppPages.appPages,
