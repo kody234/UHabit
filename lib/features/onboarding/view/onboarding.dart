@@ -8,6 +8,7 @@ import 'package:u_habit/core/constants/app_images.dart';
 import 'package:u_habit/features/authentication/view/login_page.dart';
 import 'package:u_habit/features/onboarding/controllers/onboarding_controller.dart';
 
+import '../../../core/widgets/custom_elevated_button.dart';
 import '../../splash_screen/controller/controller.dart';
 import '../widgets/onboarding_item.dart';
 
@@ -91,21 +92,11 @@ class OnBoardingScreen extends StatelessWidget {
                 ? SizedBox(
                     width: Get.width,
                     height: 60.sp,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Get.off(LoginPage());
+                    child: CustomElevatedButton(
+                      label: 'Get Started',
+                      onTap: () {
+                        Get.off(const LoginPage());
                       },
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.primaryOrange,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8))),
-                      child: Text(
-                        'Get Started',
-                        style: TextStyle(
-                            fontSize: 17.sp,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.primaryTextColor),
-                      ),
                     ))
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

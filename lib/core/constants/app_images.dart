@@ -6,4 +6,6 @@ class AppImages {
   static const String imOnboarding4 = 'assets/images/onboarding4.png';
   static const String imSplashScreenBlur =
       'assets/images/splashscreen_blur.png';
+  static const String imSignUp = 'assets/images/signUp.png';
+  static const String imResetPassword = 'assets/images/resetPassword.png';
 }
